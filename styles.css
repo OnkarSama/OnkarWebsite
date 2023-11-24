@@ -1,0 +1,46 @@
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #000;
+  color: white;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+}
+
+section {
+  text-align: center;
+  padding: 20px;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  right: 0;
+  padding: 0px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+#socials {
+  display: flex;
+  gap: 10px;
+}
+
+#socials a {
+  display: flex;
+  align-items: center;
+}
+
+#socials svg {
+  width: 40px; /* Adjust the size of the SVG icons as needed */
+  height: 40px;
+  fill: white; /* Adjust the color of the SVG icons */
+}
+
+#yolo {
+  margin-top: 20px;
+}
