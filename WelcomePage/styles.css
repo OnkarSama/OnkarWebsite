@@ -29,6 +29,7 @@ nav ul {
     padding: 0;
     margin: 0;
     display: flex;
+    justify-content: space-around;
 }
 
 nav li {
@@ -42,14 +43,15 @@ nav a {
 }
 
 .animated-text {
-    padding-left: 20px; /* 20px margin from the left */
+    margin-left: 20px; /* 20px margin from the left */
     font-family: "JetBrains Mono", serif;
     font-size: 35px;
     color: #ecf0f1;
     white-space: nowrap;
     overflow: hidden; /* Ensures text stays within the container */
     border-right: 3px solid white; /* Cursor-like blinking effect */
-    display: inline-block;
+    display: flex; /* This will ensure inline elements are aligned properly */
+    align-items: center; /* Align items vertically in the center */
     animation: typing 3s steps(200, end), blink 0.75s step-end infinite;
     /* Adjust the duration to control the speed of typing */
 }
@@ -65,12 +67,18 @@ nav a {
     font-size: 35px;
 }
 
+.quotesLeft {
+    margin-right: 5px;
+    color: #1E90FF; /* Color for quotes */
+    font-size: 35px;
+}
+
 @keyframes typing {
     from {
         width: 0;
     }
     to {
-        width: 21ch;
+        width: 19ch;
     }
 }
 
@@ -98,6 +106,7 @@ footer {
 .socials {
     display: flex;
     align-items: center;
+    margin-left: 10px;
 }
 
 .social-icon {
@@ -152,7 +161,7 @@ a {
     background-color: rgba(255, 255, 255, 0.1); /* Slight background color */
     color: #ecf0f1; /* Light color for the quote */
     max-width: 50%; /* Max width of the quote box */
-    margin: 0 0 10px 0;
+    margin: 0 10px 0 0;
     align-content: center;
 }
 
