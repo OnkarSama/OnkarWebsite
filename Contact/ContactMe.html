@@ -7,19 +7,27 @@
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
     <link rel="stylesheet" href="../WelcomePage/styles.css"/>
     <link rel="stylesheet" href="../Contact/ContactMeStyle.css"/>
+    <script src="contact.js"></script>
     <link rel="icon" type="image/x-icon" href="../assets/PurpleHeart.png"/>
-    <title>About Me</title>
+    <title>Contact Me</title>
 </head>
 <body>
 
 <header>
     <div class="animated-text">
+        <a href="../WelcomePage/MainPage.html" style="text-decoration: none; color: inherit;">
         <strong class="brackets">[</strong><i class="quotesLeft">"</i><i>Contact Me!</i><i class="quotes">"</i><strong class="brackets">]</strong>
+        </a>
     </div>
     <nav>
         <ul>
-            <li><a href="../WelcomePage/MainPage.html">Home</a></li>
-            <li><a href="../About/AboutMe.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="../About/AboutMe.html">About Me</a></li>
+                    <li><a href="../About/MySkills.html">My Skills</a></li>
+                </ul>
+            </li>
             <li><a href="../Projects/PersonalProjects.html">Projects</a></li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
             <li><a href="../Contact/ContactMe.html">Contact</a></li>
@@ -29,6 +37,31 @@
 
 <div class="content">
     <!-- Main Content -->
+    <div class="contact-container">
+        <h1>Contact Me</h1>
+        <form id="contact-form">
+            <div class="form-row">
+                <div class="form-group">
+                    <label for="FirstName">First Name</label>
+                    <input type="text" id="FirstName" name="first_name" required>
+                </div>
+                <div class="form-group">
+                    <label for="LastName">Last Name</label>
+                    <input type="text" id="LastName" name="last_name" required>
+                </div>
+            </div>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <div class="form-group">
+                <label for="message">Message</label>
+                <textarea id="message" name="message" required></textarea>
+            </div>
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
 </div>
 
 <footer>
