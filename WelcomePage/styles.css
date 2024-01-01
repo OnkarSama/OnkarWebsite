@@ -18,7 +18,7 @@ body {
 header {
     background: rgba(195, 177, 255, 0.4);
     color: white;
-    padding: 10px 5px; /* Adjust padding as needed */
+    padding: 10px 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -39,38 +39,34 @@ nav li {
 nav a {
     color: white;
     text-decoration: none;
-    font-size: 1.1em;
+    font-size: 1.3em;
 }
 
 .animated-text {
-    margin-left: 20px; /* 20px margin from the left */
+    margin-left: 20px;
     font-family: "JetBrains Mono", serif;
     font-size: 35px;
     color: #ecf0f1;
     white-space: nowrap;
-    overflow: hidden; /* Ensures text stays within the container */
-    border-right: 3px solid white; /* Cursor-like blinking effect */
-    display: flex; /* This will ensure inline elements are aligned properly */
-    align-items: center; /* Align items vertically in the center */
+    overflow: hidden;
+    border-right: 3px solid white;
+    display: flex;
+    align-items: center;
     animation: typing 3s steps(200, end), blink 0.75s step-end infinite;
-    /* Adjust the duration to control the speed of typing */
 }
 
-
 .brackets {
-    color: #16a085; /* Color for brackets */
+    color: #16a085;
     font-size: 42px;
 }
 
-.quotes {
-    color: #1E90FF; /* Color for quotes */
+.quotes, .quotesLeft {
+    color: #1E90FF;
     font-size: 35px;
 }
 
 .quotesLeft {
     margin-right: 5px;
-    color: #1E90FF; /* Color for quotes */
-    font-size: 35px;
 }
 
 @keyframes typing {
@@ -89,15 +85,14 @@ nav a {
 }
 
 .content {
-    flex: 1; /* Takes up all available space */
+    flex: 1;
 }
-
 
 /* Footer Styles */
 footer {
     background: rgba(195, 177, 255, 0.4);
     color: white;
-    padding: 10px 5px; /* Adjust padding as needed */
+    padding: 10px 5px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -120,14 +115,13 @@ footer {
     overflow: hidden;
     position: relative;
     z-index: 1;
-    border: 2px solid #fff; /* Adjust border color and thickness */
+    border: 2px solid #fff;
     transition: transform 0.5s ease, background-color 0.5s ease;
-    text-decoration: none; /* Remove underline */
+    text-decoration: none;
 }
 
 .social-icon i {
-    color: #ffffff; /* Default icon color */
-    font-size: 24px;
+    color: #ffffff;
 }
 
 .github:hover, .github:hover i {
@@ -142,36 +136,52 @@ footer {
     background-color: #0077b5;
 }
 
-/* Remove underline from links */
-a {
-    text-decoration: none; /* Remove underline from all links */
+/* Dropdown Menu Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
 }
 
-.copyright {
-    justify-content: center;
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #FFB1C3;
+    min-width: 160px;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
-#quote {
-    padding: 10px;
-    font-style: italic; /* Italicize the quote */
-    font-size: 1em; /* Increase the font size */
-    text-align: center; /* Center align the quote */
-    border-left: 4px solid #16a085; /* Add a left border */
-    border-right: 4px solid #16a085; /* Add a left border */
-    background-color: rgba(255, 255, 255, 0.1); /* Slight background color */
-    color: #ecf0f1; /* Light color for the quote */
-    max-width: 50%; /* Max width of the quote box */
-    margin: 0 10px 0 0;
-    align-content: center;
+.dropdown-content a {
+    color: black;
+    padding: 5px 16px;
+    text-decoration: none;
+    display: block;
+    text-align: left;
 }
 
-/* Responsive Adjustments */
+.dropdown-content a:hover {
+    background-color: rgba(195, 177, 255, 0.4);
+}
+
+.dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.dropdown > a {
+    color: white;
+}
+
+.dropdown:hover > a {
+    background-color: rgba(195, 177, 255, 0.4);
+}
+
+/* Responsive Design Adjustments */
 @media (max-width: 600px) {
-
     header, footer {
         flex-direction: column;
         text-align: center;
-        padding: 20px 10px; /* Increased padding */
+        padding: 20px 10px;
     }
 
     nav ul {
@@ -180,15 +190,124 @@ a {
     }
 
     .socials {
-        margin-top: 10px; /* Add space between links and copyright text */
+        margin-top: 10px;
     }
 
     nav li {
         margin: 5px 0;
     }
 
-    #quote {
-        font-size: 1em; /* Smaller font for small screens */
-        padding: 5px;
+    .dropdown-content {
+        left: 0;
+        transform: none;
     }
 }
+
+/* Quote Styles */
+#quote {
+    padding: 10px;
+    font-style: italic;
+    font-size: 1em;
+    text-align: center;
+    border-left: 4px solid #16a085;
+    border-right: 4px solid #16a085;
+    background-color: rgba(255, 255, 255, 0.1);
+    color: #ecf0f1;
+    max-width: 50%;
+    margin: 0 5px 0 0;
+}
+
+/* Enhance Typography */
+body, h1, h2, h3, p {
+    font-weight: normal;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Subtle Animations for Links */
+a, .social-icon, .dropdown > a {
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease;
+}
+
+a:hover, .dropdown > a:hover {
+    color: #FFB1C3;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+}
+
+/* Improve Layout and Spacing */
+.content {
+    padding: 20px;
+    text-align: center;
+}
+
+/* Hover Effects for Social Icons */
+.social-icon:hover {
+    transform: scale(1.1);
+}
+
+/* Quote Enhancement */
+#quote {
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design Adjustments */
+@media (max-width: 800px) {
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    #quote {
+        max-width: 70%;
+    }
+}
+
+/* Abstract Sidebar Design */
+.sidebar {
+    width: 400px; /* Adjust width as needed */
+    background: linear-gradient(to right, #6a11cb 0%, #2575fc 100%); /* Abstract gradient background */
+    color: white;
+    padding: 20px;
+    position: absolute; /* Change to fixed for a stationary sidebar */
+    height: 100vh;
+    box-sizing: border-box;
+    left: 0; /* Position the sidebar on the left */
+    clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%); /* Abstract shape */
+    z-index: 2; /* Ensure sidebar is above other content */
+}
+
+/* Centering the Content */
+.page-container {
+    display: flex;
+    min-height: 100vh;
+    margin-left: 400px; /* Adjust margin to account for sidebar width */
+}
+
+.content {
+    flex-grow: 1;
+    margin: 0 auto; /* Center content */
+    padding: 20px;
+    max-width: 800px; /* Adjust maximum width as needed */
+}
+
+/* Adjustments for smaller screens */
+@media (max-width: 800px) {
+    .sidebar {
+        width: 100%;
+        height: auto;
+        position: absolute;
+        left: auto;
+        clip-path: none; /* Reset shape for mobile */
+    }
+
+    .page-container {
+        margin-left: 0; /* Reset margin for mobile */
+    }
+
+    .content {
+        margin: 0 auto;
+        max-width: 100%;
+    }
+}
+
+
+

@@ -14,12 +14,20 @@
 
 <header>
     <div class="animated-text">
-        <strong class="brackets">[</strong><i class="quotesLeft">"</i><i>Hello World!</i><i class="quotes">"</i><strong class="brackets">]</strong>
+        <a href="../WelcomePage/MainPage.html" style="text-decoration: none; color: inherit;">
+            <strong class="brackets">[</strong><i class="quotesLeft">"</i><i>Hello World!</i><i
+                class="quotes">"</i><strong class="brackets">]</strong>
+        </a>
     </div>
     <nav>
         <ul>
-            <li><a href="./MainPage.html">Home</a></li>
-            <li><a href="../About/AboutMe.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="../About/AboutMe.html">About Me</a></li>
+                    <li><a href="../About/MySkills.html">My Skills</a></li>
+                </ul>
+            </li>
             <li><a href="../Projects/PersonalProjects.html">Projects</a></li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
             <li><a href="../Contact/ContactMe.html">Contact</a></li>
@@ -27,15 +35,66 @@
     </nav>
 </header>
 
-<div class="content">
-    <!-- Main Content -->
+<div class="page-container">
+    <!-- Sidebar (Previously Hero Section) -->
+    <aside class="sidebar">
+        <h1>Welcome to My Personal Website</h1>
+        <p>Explore My Journey, Skills, and Projects</p>
+        <a href="../About/AboutMe.html" class="cta-button">About Me</a>
+    </aside>
+
+    <div class="content">
+        <!-- Main Content -->
+
+        <!-- About Me Preview Section -->
+        <section id="about-preview">
+            <h2>A Bit About Me</h2>
+            <p>Learn more about my background, interests, and what drives me...</p>
+            <a href="../About/AboutMe.html" class="cta-button">Read More</a>
+        </section>
+
+        <!-- Skills Preview Section -->
+        <section id="skills-preview">
+            <h2>My Skills</h2>
+            <p>Discover the skills and technologies I am proficient in...</p>
+            <a href="../About/MySkills.html" class="cta-button">Explore Skills</a>
+        </section>
+
+        <!-- Projects Section -->
+        <section id="projects">
+            <h2>Featured Projects</h2>
+            <div class="project-item">Project 1</div>
+            <div class="project-item">Project 2</div>
+            <a href="../Projects/PersonalProjects.html" class="cta-button">View All Projects</a>
+        </section>
+
+        <!-- Blog Section (Optional) -->
+        <!-- Uncomment if you have a blog
+        <section id="blog">
+            <h2>Latest From My Blog</h2>
+            <article class="blog-post">
+                <h3>Post Title</h3>
+                <p>Post excerpt...</p>
+            </article>
+            More blog posts
+        </section>
+        -->
+
+        <!-- Call to Action -->
+        <section class="cta">
+            <h2>Interested in Collaborating?</h2>
+            <a href="../Contact/ContactMe.html" class="cta-button">Get In Touch</a>
+        </section>
+    </div>
 </div>
 
 <footer>
     <div class="socials">
         <a href="https://github.com/OnkarSama" class="social-icon github"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/onkarsama/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/0nkardhillon/" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/onkarsama/" class="social-icon instagram"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/0nkardhillon/" class="social-icon linkedin"><i
+                class="fab fa-linkedin-in"></i></a>
     </div>
     <div class="copyright">
         <p>&copy; 2023 Onkar's Super Swag Website. All rights reserved.</p>
