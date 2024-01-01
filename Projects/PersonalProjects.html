@@ -8,7 +8,6 @@
     <link rel="stylesheet" href="../WelcomePage/styles.css"/>
     <link rel="stylesheet" href="../Projects/PersonalProjectsStyle.css"/>
     <script src="../Projects/GithubRepo.js" defer></script>
-    <script src="../Projects/Skills.js"></script>
     <link rel="icon" type="image/x-icon" href="../assets/PurpleHeart.png"/>
     <title>Personal Projects</title>
 </head>
@@ -16,12 +15,19 @@
 
 <header>
     <div class="animated-text">
+        <a href="../WelcomePage/MainPage.html" style="text-decoration: none; color: inherit;">
         <strong class="brackets">[</strong><i class="quotesLeft">"</i><i>Personal Projects!</i><i class="quotes">"</i><strong class="brackets">]</strong>
+        </a>
     </div>
     <nav>
         <ul>
-            <li><a href="../WelcomePage/MainPage.html">Home</a></li>
-            <li><a href="../About/AboutMe.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="../About/AboutMe.html">About Me</a></li>
+                    <li><a href="../About/MySkills.html">My Skills</a></li>
+                </ul>
+            </li>
             <li><a href="../Projects/PersonalProjects.html">Projects</a></li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
             <li><a href="../Contact/ContactMe.html">Contact</a></li>
@@ -30,13 +36,6 @@
 </header>
 
 <div class="content">
-
-    <section id="skills">
-        <h2>My Skills Timeline</h2>
-        <ol class="timeline">
-            <!-- Skills will be dynamically inserted here by JavaScript -->
-        </ol>
-    </section>
 
     <section id="projects">
         <h2>Personal Projects</h2>
@@ -49,8 +48,10 @@
 <footer>
     <div class="socials">
         <a href="https://github.com/OnkarSama" class="social-icon github"><i class="fab fa-github"></i></a>
-        <a href="https://www.instagram.com/onkarsama/" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-        <a href="https://www.linkedin.com/in/0nkardhillon/" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+        <a href="https://www.instagram.com/onkarsama/" class="social-icon instagram"><i
+                class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/0nkardhillon/" class="social-icon linkedin"><i
+                class="fab fa-linkedin-in"></i></a>
     </div>
     <div class="copyright">
         <p>&copy; 2023 Onkar's Super Swag Website. All rights reserved.</p>
