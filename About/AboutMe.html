@@ -6,7 +6,7 @@
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <link href='https://fonts.googleapis.com/css?family=JetBrains Mono' rel='stylesheet'>
     <link rel="stylesheet" href="../WelcomePage/styles.css"/>
-    <link rel="stylesheet" href="../About/AboutMeStyle.css"/>
+    <link rel="stylesheet" href="AboutStyle.css"/>
     <link rel="icon" type="image/x-icon" href="../assets/PurpleHeart.png"/>
     <title>About Me</title>
 </head>
@@ -14,12 +14,19 @@
 
 <header>
     <div class="animated-text">
+        <a href="../WelcomePage/MainPage.html" style="text-decoration: none; color: inherit;">
         <strong class="brackets">[</strong><i class="quotesLeft">"</i><i>About Me!</i><i class="quotes">"</i><strong class="brackets">]</strong>
+        </a>
     </div>
     <nav>
         <ul>
-            <li><a href="../WelcomePage/MainPage.html">Home</a></li>
-            <li><a href="../About/AboutMe.html">About Me</a></li>
+            <li class="dropdown">
+                <a href="javascript:void(0)">About</a>
+                <ul class="dropdown-content">
+                    <li><a href="../About/AboutMe.html">About Me</a></li>
+                    <li><a href="../About/MySkills.html">My Skills</a></li>
+                </ul>
+            </li>
             <li><a href="../Projects/PersonalProjects.html">Projects</a></li>
             <li><a href="resume.pdf" target="_blank">Resume</a></li>
             <li><a href="../Contact/ContactMe.html">Contact</a></li>
