@@ -1,11 +1,12 @@
-html {
+html, body {
     height: 100%;
+    margin: 0;
+    padding: 0;
 
 }
 
 /* General Styles */
 body {
-    margin: 0;
     font-family: "JetBrains Mono", serif;
     background-color: #000000;
     color: white;
@@ -223,6 +224,10 @@ body, h1, h2, h3, p {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
 }
 
+a {
+    color: #16A085;
+}
+
 
 /* Subtle Animations for Links */
 a, .social-icon, .dropdown > a {
@@ -234,11 +239,6 @@ a:hover, .dropdown > a:hover {
     text-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
 }
 
-/* Improve Layout and Spacing */
-.content {
-    padding: 20px;
-    text-align: center;
-}
 
 /* Hover Effects for Social Icons */
 .social-icon:hover {
@@ -284,9 +284,11 @@ a:hover, .dropdown > a:hover {
 
 .content {
     flex-grow: 1;
-    margin: 0 auto; /* Center content */
-    padding: 20px;
+    /* Center content */
+    margin: 0 auto;
+    padding: 20px 20px 0 20px;
     max-width: 800px; /* Adjust maximum width as needed */
+    text-align: center;
 }
 
 /* Adjustments for smaller screens */
