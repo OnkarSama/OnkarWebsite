@@ -6,24 +6,48 @@
         width: 13ch;
     }
 }
+/* Existing CSS */
 
-/* Add this to your ResumeStyle.css file */
-
+/* Adjustments for the .content class */
 .content {
     display: flex;
     justify-content: center; /* Center the PDF horizontally */
     align-items: center; /* Center the PDF vertically */
-    height: auto; /* Take up full viewport height */
+    flex-grow: 1; /* Allows the content to grow as needed */
     padding: 20px; /* Add some padding around the PDF */
+    overflow: hidden; /* Prevents overflow */
 }
 
-/*#resume {*/
-/*    display: flex;*/
-/*    width: 80%; !* Full width of the container *!*/
-/*    height: 80%; !* Full height of the container *!*/
-/*    border: none; !* Remove any border *!*/
-/*    justify-content: center;*/
-/*    align-items: center;*/
-/*}*/
+/* Adjustments for the #resume iframe */
+#resume {
+    width: 100%; /* Adjusts width to be 100% of its parent */
+    height: auto; /* Adjust height automatically */
+    max-height: 80vh; /* Maximum height to maintain aspect ratio */
+    border: none; /* Remove any border */
+}
 
+/* Responsive Design for smaller screens */
+@media (max-width: 800px) {
+    .page-container {
+        flex-direction: column; /* Stack sidebar and content */
+    }
+
+    .sidebar {
+        width: 100%; /* Full width for the sidebar */
+        height: auto; /* Auto height */
+        position: relative; /* Relative positioning */
+        clip-path: none; /* Reset shape */
+    }
+
+    #resume {
+        max-height: 60vh; /* Smaller maximum height for better fit */
+    }
+}
+
+@media (max-width: 600px) {
+    /* Further adjustments for very small screens */
+    #resume {
+        max-height: 50vh; /* Even smaller maximum height */
+    }
+}
 
