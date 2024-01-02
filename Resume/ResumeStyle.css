@@ -3,6 +3,27 @@
         width: 0;
     }
     to {
-        width: 19ch;
+        width: 13ch;
     }
 }
+
+/* Add this to your ResumeStyle.css file */
+
+.content {
+    display: flex;
+    justify-content: center; /* Center the PDF horizontally */
+    align-items: center; /* Center the PDF vertically */
+    height: auto; /* Take up full viewport height */
+    padding: 20px; /* Add some padding around the PDF */
+}
+
+/*#resume {*/
+/*    display: flex;*/
+/*    width: 80%; !* Full width of the container *!*/
+/*    height: 80%; !* Full height of the container *!*/
+/*    border: none; !* Remove any border *!*/
+/*    justify-content: center;*/
+/*    align-items: center;*/
+/*}*/
+
+
