@@ -9,8 +9,6 @@
     <link rel="stylesheet" href="../WelcomePage/styles.css"/>
     <link rel="stylesheet" href="../Resume/ResumeStyle.css"/>
 
-    <script src="../Resume/pdfDisplay.js"></script>
-
     <title>Resume</title>
 </head>
 <body>
@@ -22,6 +20,8 @@
                 class="quotes">"</i><strong class="brackets">]</strong>
         </a>
     </div>
+
+
     <nav>
         <ul>
             <li class="dropdown">
@@ -39,18 +39,22 @@
 </header>
 
 <div class="page-container">
-
-    <div class="content">
-        <!-- Main Content -->
-        <div class="content">
-                <!-- Embed PDF here -->
-            <iframe allow="autoplay; fullscreen; encrypted-media; picture-in-picture;" scrolling="no" data-image-dimensions="816x1056" allowfullscreen="true" src="../Resume/Resume.pdf#toolbar=0" width="816" data-embed="true" frameborder="0"  id="resume" height="1056"></iframe>
-
-        </div>
-
-
+    <div class="pdf-container">
+        <!-- Embed PDF here -->
+        <iframe src="../Resume/Onkar%20Dhillon%20-%20Resume.pdf#toolbar=0" frameborder="0" id="resume"></iframe>
     </div>
+
+    <div class="resume-page-content">
+        <div id="blurb">
+            <h1 id="resumeTitle">My Professional Resume</h1>
+            <p>Welcome to my online resume. Here you can view my professional qualifications, experience, and skills.
+                Feel free to download a copy for your reference.</p>
+        </div>
+        <button id="downloadButton"><i>Download Resume</i></button>
+    </div>
+
 </div>
+
 
 <footer>
     <div class="socials">
@@ -69,5 +73,6 @@
     </div>
 </footer>
 
+<script src="../Resume/pdfDisplay.js" ></script>
 </body>
 </html>

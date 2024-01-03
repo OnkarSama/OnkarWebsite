@@ -1,53 +1,84 @@
 @keyframes typing {
-    from {
-        width: 0;
-    }
-    to {
-        width: 13ch;
-    }
+    from { width: 0; }
+    to { width: 13ch; }
 }
-/* Existing CSS */
 
-/* Adjustments for the .content class */
-.content {
+.page-container {
+    flex-grow: 1;
     display: flex;
-    justify-content: center; /* Center the PDF horizontally */
-    align-items: center; /* Center the PDF vertically */
-    flex-grow: 1; /* Allows the content to grow as needed */
-    padding: 20px; /* Add some padding around the PDF */
-    overflow: hidden; /* Prevents overflow */
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    padding: 5px;
+    box-sizing: border-box;
+    margin: 10px;
+    height: 90vh;
 }
 
-/* Adjustments for the #resume iframe */
+.pdf-container {
+    position: relative;
+    width: 80vw;
+    max-width: 816px;
+    height: 0;
+    padding-bottom: calc(80vw * 9 / 16);
+    overflow: hidden;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    border-radius: 25px;
+    margin-bottom: 20px;
+}
+
 #resume {
-    width: 100%; /* Adjusts width to be 100% of its parent */
-    height: auto; /* Adjust height automatically */
-    max-height: 80vh; /* Maximum height to maintain aspect ratio */
-    border: none; /* Remove any border */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
 }
 
-/* Responsive Design for smaller screens */
+#downloadButton {
+    padding: 10px 20px;
+    background-color: #1abc9c;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: color 0.3s ease, background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    font-weight: bold;
+    letter-spacing: 0.05em;
+    margin-top: 10px;
+}
+
+#downloadButton:hover {
+    background-color: #FFB1C3;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transform: translateY(-2px);
+}
+
+#downloadButton:focus {
+    outline: none;
+}
+
+.resume-page-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    align-items: center;
+    padding: 20px;
+}
+
 @media (max-width: 800px) {
-    .page-container {
-        flex-direction: column; /* Stack sidebar and content */
-    }
-
-    .sidebar {
-        width: 100%; /* Full width for the sidebar */
-        height: auto; /* Auto height */
-        position: relative; /* Relative positioning */
-        clip-path: none; /* Reset shape */
-    }
-
-    #resume {
-        max-height: 60vh; /* Smaller maximum height for better fit */
+    .pdf-container {
+        width: 90vw;
+        padding-bottom: calc(90vw * 9 / 16);
     }
 }
 
 @media (max-width: 600px) {
-    /* Further adjustments for very small screens */
-    #resume {
-        max-height: 50vh; /* Even smaller maximum height */
+    .pdf-container {
+        width: 95vw;
+        padding-bottom: calc(95vw * 9 / 16);
     }
 }
-
