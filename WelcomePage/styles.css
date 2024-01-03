@@ -268,7 +268,6 @@ a:hover, .dropdown > a:hover {
     color: white;
     padding: 20px;
     position: absolute; /* Change to fixed for a stationary sidebar */
-    height: 100vh;
     box-sizing: border-box;
     left: 0; /* Position the sidebar on the left */
     clip-path: polygon(0 0, 100% 0, 85% 100%, 0% 100%); /* Abstract shape */
@@ -277,8 +276,8 @@ a:hover, .dropdown > a:hover {
 
 /* Centering the Content */
 .page-container {
+    flex: 1;
     display: flex;
-    min-height: 100vh;
     margin-left: 400px; /* Adjust margin to account for sidebar width */
 }
 
